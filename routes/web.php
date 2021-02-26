@@ -24,8 +24,12 @@ Route::get('/about', function () {
 Route::get('/article/{id}', function ($id) {
     echo ("Ini Merupakan Halaman Article dengan id ".$id);
 
- Route::get('/article/{id}', function ($id) {
-    echo ("Ini Merupakan Halaman Article dengan id ".$id);
-});
-});
 
+});
+//Practicum 2
+
+use App\Http\Controllers\PageController;
+
+Route::get('/',[PageController::class,'index']);
+Route::get('/about',[PageController::class,'about']);
+Route::get('/article/{id}',[PageController::class,'article']);
